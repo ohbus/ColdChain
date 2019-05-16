@@ -14,7 +14,7 @@ Documentation
 
 ### Getting Started Guide
 
-To understand the overview of the Cold-Chain solution please refer **[Getting Started Guide](https://github.com/sysgain/ColdChain/blob/master/Documentation/getting-started.md)**. 
+To understand the overview of the Cold-Chain solution please refer **[Getting Started Guide](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/getting-started.md)**. 
 
 ### Deployment Guide
 
