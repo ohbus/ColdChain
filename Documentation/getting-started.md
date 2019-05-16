@@ -690,12 +690,12 @@ The below Table explains the $ impact for the solutions by resources.
 
 ### 5.1 Deployment Guide
 
-To Deploy the Cold-Chain solution please refer **[Deployment Guide](https://github.com/sysgain/ColdChain/blob/master/Documentation/deploymentguide.md)**.
+To Deploy the Cold-Chain solution please refer **[Deployment Guide](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/deploymentguide.md)**.
 
 ### 5.2 Admin Guide
 
-**[Admin Guide](https://github.com/sysgain/ColdChain/blob/master/Documentation/admin-guide.md)** explains about how to manage Azure resources, how to perform HA & DR strategies and validate components once the solution deployed Successfully. 
+**[Admin Guide](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/admin-guide.md)** explains about how to manage Azure resources, how to perform HA & DR strategies and validate components once the solution deployed Successfully. 
 
 ### 5.3 User Guide
 
-To find how to use the Cold-chain solution once deployed successfully in Azure portal refer **[User Guide](https://github.com/sysgain/ColdChain/blob/master/Documentation/user-guide.md)**
+To find how to use the Cold-chain solution once deployed successfully in Azure portal refer **[User Guide](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/user-guide.md)**
