@@ -92,7 +92,7 @@ Cold Chain management solution for Pharma addresses the challenges and concerns 
 
    Quorum is an Ethereum based DLT (Distributed Ledger Technology). The objective behind this to provide a permissioned implementation of Ethereum which supports transactions and contract privacy. 
 
-![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/1.png)
+![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/csubsys.png)
 
  ### 1.4 The Workflow 
 
