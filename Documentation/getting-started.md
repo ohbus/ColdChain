@@ -100,7 +100,7 @@ Cold Chain management solution for Pharma addresses the challenges and concerns 
  
  ## 2.0 Core Structure
  
- ![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/2.png)
+ ![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/core.png)
  
  ### 2.1 Core Architecture Components:
  
@@ -148,7 +148,7 @@ Basic solution will have core components, in addition this solution also consist
 
 * OMS Log Analytics provide monitoring for IoT Hub, Stream Analytics, Cosmos DB, SQL Database. 
 
-![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/3.png)
+![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/basic.png)
 
 * 1-Web App 
 
@@ -184,7 +184,7 @@ Standard Architecture diagram contains two regions
 
 The below diagram depicts the data flow between Azure Components in standard solution. 
 
-![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/4.png)
+![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/standard.png)
 
 Standard Architecture comprises of following components: 
 
@@ -232,7 +232,7 @@ Premium Architecture comprises of two regions
 
 All the components get deployed at once in the premium architecture. The diagram below depicts the data flow between the Azure components in premium solution 
 
-![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/5.png)
+![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/premium.png)
 
 Premium Architecture comprises of following components:  
 
