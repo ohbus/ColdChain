@@ -48,11 +48,11 @@ This Document explains how to use the Cold-chain solution. In addition to the us
 
 **Note**: Refer the **User Guide Document** to interact with Cold Chain Solution. You can user the User Guide Document to create, monitor and track the shipments at a pallet, carton, box and a unit level. The Cold Chain Solution allows to monitor the near real-time humidity, temperature, shock & vibration and tamper status of the various artifacts in the shipment.
 
-## 3.	Security
+## 3. Security
 
-### 3.1.	Storage Security
+### 3.1. Storage Security
 
-#### 3.1.1.	Secure Transfer Required
+#### 3.1.1. Secure Transfer Required
 
 The **Secure transfer required** option enhances the security of your storage account by only allowing requests to the account from secure connections. For example, when you're calling REST APIs to access your storage account, you must connect by using HTTPS. "Secure transfer required" rejects requests that use HTTP.
 
@@ -64,7 +64,7 @@ In storage account overview click on configuration enabled the secure transfer r
 
 ![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/A03.png)
 
-#### 3.1.2.	Advanced Threat Protection
+#### 3.1.2. Advanced Threat Protection
 
 Azure Storage Advanced Threat Protection detects anomalies in account activity and notifies you of potentially harmful attempts to access your account. This layer of protection allows you to address threats without the need to be a security expert or manage security monitoring systems. 
 
@@ -72,7 +72,7 @@ In storage account overview click on advanced treat protection select on and cli
 
 ![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/A04.png)
 
-#### 3.1.3.	Shared Access Key
+#### 3.1.3. Shared Access Key
 
 A shared access signature provides delegated access to resources in your storage account. With a SAS, you can grant clients access to resources in your storage account, without sharing your account keys. This is the key point of using shared access signatures in your applications--a SAS is a secure way to share your storage resources without compromising your account keys.
 
@@ -80,7 +80,7 @@ A shared access signature provides delegated access to resources in your storage
 
 ![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/A06.png)
 
-#### 3.1.4.	Encryption
+#### 3.1.4. Encryption
 
 One way that the Azure storage platform protects your data is via Storage Service Encryption (SSE), which encrypts your data when writing it to storage, and decrypts your data when retrieving it. The encryption and decryption is automatic, transparent, and uses 256-bit AES encryption, one of the strongest block ciphers available. 
 
@@ -111,9 +111,9 @@ You can specify your key either as a URI, or by selecting the key from a key vau
 ![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/A014.png)
 
 
-### 3.2.	SQL Database Security
+### 3.2. SQL Database Security
 
-#### 3.2.1.	Advanced data security
+#### 3.2.1. Advanced data security
 
 Advanced data security (ADS) provides a set of advanced SQL security capabilities, including data discovery & classification, vulnerability assessment, and threat detection.
 
@@ -163,7 +163,7 @@ Once you have established your baseline security state, VA only reports on devia
 
 ![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/A023.png)
 
-#### 3.2.2.	Azure SQL Database data discovery & classification
+#### 3.2.2. Azure SQL Database data discovery & classification
 
 * Discovering and classifying your most sensitive data (business, financial, healthcare, personally identifiable data.
 
@@ -187,7 +187,7 @@ Once you have established your baseline security state, VA only reports on devia
 
 ![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/A027.png)
 
-#### 3.2.3.	Auditing
+#### 3.2.3. Auditing
 
 Audit logs helps monitor data and keep track of potential security breaches or internal misuses of information. 
 
@@ -220,7 +220,7 @@ If you prefer to enable auditing on the database level, switch **Auditing** to *
 
 ![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/A033.png)
 
-#### 3.2.4.	Transparent data encryption for SQL Database and Data Warehouse
+#### 3.2.4. Transparent data encryption for SQL Database and Data Warehouse
 
 *	Transparent data encryption (TDE) helps protect Azure SQL Database, Azure SQL Managed Instance, and Azure Data Warehouse against the threat of malicious activity.
 
@@ -240,7 +240,7 @@ If you prefer to enable auditing on the database level, switch **Auditing** to *
 
 *	To use transparent data encryption with Bring Your Own Key support and protect your databases with a key from Key Vault, open the transparent data encryption settings under your server.
 
-#### 3.2.5.	SQL Database dynamic data masking
+#### 3.2.5. SQL Database dynamic data masking
 
 Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. It’s a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields, while the data in the database is not changed.
 
