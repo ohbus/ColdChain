@@ -623,7 +623,7 @@ After opening the web application, you can verify the application flow (use case
 
 12.	Once the Failover completes, then deploy the template in the “-asr” resource group (**coldchain-standard-solution-asr**) from the following link which deploys the Load balancer and NSG for the Blockchain setup.
 
-https://storageccqia.blob.core.windows.net/cc-iot/cold-chain-2304/cold-chain-costing-latest/nested/asr-temp.json
+https://raw.githubusercontent.com/SecureColdChain/ColdChain/master/nested/asr-temp.json
 
 13.	In Azure portal go to **Template deployment-> Custom deployment-> Edit template** 
 
