@@ -37,6 +37,8 @@
             "defaultValue": "eastus2",
             "allowedValues": [
                 "eastus2",
+                "eastus",
+                "westus",
                 "centralus",
                 "westus2",
                 "westcentralus",
@@ -516,6 +518,8 @@
         "webSiteNameDR": "recoveryapi",
         "eastus2": "centralus",
         "centralus": "eastus2",
+        "eastus": "westus",
+        "westus": "eastus",
         "westus2": "westcentralus",
         "westcentralus": "westus2",
         "canadacentral": "canadaeast",
