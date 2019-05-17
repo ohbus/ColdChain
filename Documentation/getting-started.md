@@ -2,7 +2,7 @@
 
 # ColdChain Solution
 
-![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/0.png)
+![alt text](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/images/0.png)
 
 ### Table of Contents 
 
@@ -86,15 +86,15 @@ Cold Chain management solution for Pharma addresses the challenges and concerns 
 
    Quorum is an Ethereum based DLT (Distributed Ledger Technology). The objective behind this to provide a permissioned implementation of Ethereum which supports transactions and contract privacy. 
 
-![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/csubsys.png)
+![alt text](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/images/csubsys.png)
 
  ### 1.4 The Workflow 
 
- ![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/1-1.png)
+ ![alt text](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/images/1-1.png)
  
  ## 2.0 Core Structure
  
- ![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/core.png)
+ ![alt text](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/images/core.png)
  
  ### 2.1 Core Architecture Components:
  
@@ -142,7 +142,7 @@ Basic solution will have core components, in addition this solution also consist
 
 * OMS Log Analytics provide monitoring for IoT Hub, Stream Analytics, Cosmos DB, SQL Database. 
 
-![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/basic.png)
+![alt text](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/images/basic.png)
 
 * 1-Web App 
 
@@ -178,7 +178,7 @@ Standard Architecture diagram contains two regions
 
 The below diagram depicts the data flow between Azure Components in standard solution. 
 
-![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/standard.png)
+![alt text](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/images/standard.png)
 
 Standard Architecture comprises of following components: 
 
@@ -226,7 +226,7 @@ Premium Architecture comprises of two regions
 
 All the components get deployed at once in the premium architecture. The diagram below depicts the data flow between the Azure components in premium solution 
 
-![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/premium.png)
+![alt text](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/images/premium.png)
 
 Premium Architecture comprises of following components:  
 
@@ -684,12 +684,12 @@ The below Table explains the $ impact for the solutions by resources.
 
 ### 5.1 Deployment Guide
 
-To Deploy the Cold-Chain solution please refer **[Deployment Guide](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/deploymentguide.md)**.
+To Deploy the Cold-Chain solution please refer **[Deployment Guide](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/deploymentguide.md)**.
 
 ### 5.2 Admin Guide
 
-**[Admin Guide](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/admin-guide.md)** explains about how to manage Azure resources, how to perform HA & DR strategies and validate components once the solution deployed Successfully. 
+**[Admin Guide](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/admin-guide.md)** explains about how to manage Azure resources, how to perform HA & DR strategies and validate components once the solution deployed Successfully. 
 
 ### 5.3 User Guide
 
-To find how to use the Cold-chain solution once deployed successfully in Azure portal refer **[User Guide](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/user-guide.md)**
+To find how to use the Cold-chain solution once deployed successfully in Azure portal refer **[User Guide](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/user-guide.md)**
