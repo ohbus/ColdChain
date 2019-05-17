@@ -191,15 +191,11 @@ Resource manager provides the following features:
 
 ### 4.1. ARM Template Deployment Using Azure Portal
 
-1.	Click the below **Git hub** repo URL.
-2.	Select from **branch** as shown in the following figure.
-3.	Select **Raw** from the top right corner.
-   
-![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/d11.png) 
+1.	Click the below **Git hub** URL.
 
-![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/d12.png)
+https://raw.githubusercontent.com/SecureColdChain/ColdChain/master/maintemplate.json
 
-4. **Copy** the raw template and **paste** in your **Azure Portal** for template deployment.
+2. **Copy** the raw template and **paste** in your **Azure Portal** for template deployment.
 
 ![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/d13.png)
     
@@ -529,7 +525,7 @@ Password: **Password@1234**
 
 1.	Run the following command in **BM0** to download the **script(smart-script.sh)** to deploy the smart contract
 
-$wget https://storageccqia.blob.core.windows.net/cc-iot/arm-ha/scripts/smart-script.sh
+$wget https://raw.githubusercontent.com/SecureColdChain/ColdChain/master/scripts/smart-script.sh
 
 ![alt text](https://github.com/SecureColdChain/ColdChain/blob/master/Documentation/images/d57.png)
 
@@ -541,7 +537,7 @@ $ sudo chmod 777 smart-script.sh
     
 3.	Run the script by using below command 
 
-$ ./smart-script.sh http://52.247.204.66:8545  https://storageccqia.blob.core.windows.net/cc-iot/arm-ha/scripts/contract.sol   https://storageccqia.blob.core.windows.net/cc-iot/arm-ha/scripts/smart_contratct.js
+$ ./smart-script.sh http://52.247.204.66:8545 https://raw.githubusercontent.com/SecureColdChain/ColdChain/master/scripts/contract.sol https://raw.githubusercontent.com/SecureColdChain/ColdChain/master/scripts/smart_contratct.js
 
 NOTE: The IP address used in the RPC URL will change for every deployment. So use the updated IP address to use in RPC URL. The IP address for forming RPC URL is taken from the LoadBalancer IP address if the solution type is Basic. If the solution type Standard (OR) Premium you need to use the Blockchain Traffic Manager URL  
 
