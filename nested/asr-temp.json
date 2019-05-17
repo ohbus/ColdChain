@@ -1,0 +1,309 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "loadBalancerName": {
+            "type": "string"
+        },
+        "dnsHostName": {
+            "type": "string"
+        },
+        "loadBalancerBackendAddressPoolName": {
+            "type": "string",
+            "defaultValue": "LoadBalancerBackend1"
+        },
+        "loadBalancerInboundNatRuleNamePrefix": {
+            "type": "string",
+            "defaultValue": "Nat"
+        },
+        "frontendPort1": {
+            "type": "int",
+            "defaultValue": 80
+        },
+        "backendPort1": {
+            "type": "int",
+            "defaultValue": 3000
+        },
+        "numInboundNATRules": {
+            "type": "int",
+            "defaultValue": 4
+        },
+        "inboundNATRuleCakeshopStartingPort": {
+            "type": "int",
+            "defaultValue": 4000
+        },
+        "inboundNATRuleCakeshopBackendPort": {
+            "type": "int",
+            "defaultValue": 4000
+        },
+        "inboundNATRuleSSHStartingPort": {
+            "type": "int",
+            "defaultValue": 3000
+        },
+        "inboundNATRuleSSHBackendPort": {
+            "type": "int",
+            "defaultValue": 22
+        },
+        "publicIPAddressName": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        }
+    },
+    "variables": {
+        "apiVersionPublicIPAddresses": "2016-09-01",
+        "apiVersionLoadBalancers": "2016-09-01",
+        "apiVersionLoadBalanceInboundNATRules": "2016-09-01",
+        "apiVersionNetworkSecurityGroups": "2016-09-01",
+        "dnsName":"[toLower(substring(concat('asrlbdns', uniqueString(resourceGroup().id)), 0, 9))]",
+        "nsgName":"[toLower(substring(concat('asrnsg', uniqueString(resourceGroup().id)), 0, 9))]",
+        "lbID": "[resourceId('Microsoft.Network/loadBalancers', parameters('loadBalancerName'))]",
+        "lbFrontEndIpConfigName": "LoadBalancerFrontEnd",
+        "lbFrontEndIPConfigID": "[concat(variables('lbID'),'/frontendIPConfigurations/',variables('lbFrontEndIpConfigName'))]",
+        "lbBackendAddressPoolID": "[concat(variables('lbID'), '/backendAddressPools/', parameters('loadBalancerBackendAddressPoolName'))]",
+        "loadBalancerInboundNatRuleIDprefix": "[concat(variables('lbID'),'/inboundNatRules/',parameters('loadBalancerInboundNatRuleNamePrefix'))]"
+    },
+    "resources": [
+        {
+            "apiVersion": "[variables('apiVersionPublicIPAddresses')]",
+            "type": "Microsoft.Network/publicIPAddresses",
+            "name": "[parameters('publicIPAddressName')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "publicIPAllocationMethod": "Dynamic",
+                "dnsSettings": {
+                    "domainNameLabel": "[variables('dnsName')]"
+                }
+            }
+        },
+        {
+            "apiVersion": "[variables('apiVersionNetworkSecurityGroups')]",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "name": "[variables('nsgName')]",
+            "location": "[parameters('location')]",
+            "tags": {
+                "displayName": "Network Security Group"
+            },
+            "properties": {
+                "securityRules": [
+                    {
+                        "name": "allow-ssh",
+                        "properties": {
+                            "description": "Allow SSH",
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "22",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 100,
+                            "direction": "Inbound"
+                        }
+                    },
+                    {
+                        "name": "allow-cakeshop",
+                        "properties": {
+                            "description": "Allow cakeshop IDE",
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "4000-4003",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 102,
+                            "direction": "Inbound"
+                        }
+                    },
+                    {
+                        "name": "allow-etheradmin",
+                        "properties": {
+                            "description": "Allow etheradmin site",
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "3000",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 103,
+                            "direction": "Inbound"
+                        }
+                    },
+                    {
+                        "name": "block-bootnodes",
+                        "properties": {
+                            "description": "Block Internet Bootnodes",
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "30303",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "Internet",
+                            "access": "Deny",
+                            "priority": 100,
+                            "direction": "Outbound"
+                        }
+                    },
+                    {
+                        "name": "BM0_RPC_Port_IN_8545",
+                        "properties": {
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "8545",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 113,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    },
+                    {
+                        "name": "BM0_RPC_Port_OUT_8545",
+                        "properties": {
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "8545",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 110,
+                            "direction": "Outbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "apiVersion": "[variables('apiVersionLoadBalancers')]",
+            "name": "[parameters('loadBalancerName')]",
+            "type": "Microsoft.Network/loadBalancers",
+            "location": "[parameters('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/publicIPAddresses/', parameters('publicIPAddressName'))]"
+            ],
+            "properties": {
+                "frontendIPConfigurations": [
+                    {
+                        "name": "[variables('lbFrontEndIpConfigName')]",
+                        "properties": {
+                            "publicIPAddress": {
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses/', parameters('publicIPAddressName'))]"
+                            }
+                        }
+                    }
+                ],
+                "backendAddressPools": [
+                    {
+                        "name": "[parameters('loadBalancerBackendAddressPoolName')]"
+                    }
+                ],
+                "loadBalancingRules": [
+                    {
+                        "name": "LB-Rule1",
+                        "properties": {
+                            "frontendIPConfiguration": {
+                                "id": "[variables('lbFrontEndIPConfigID')]"
+                            },
+                            "backendAddressPool": {
+                                "id": "[variables('lbBackendAddressPoolID')]"
+                            },
+                            "protocol": "Tcp",
+                            "frontendPort": "[parameters('FrontendPort1')]",
+                            "backendPort": "[parameters('BackendPort1')]",
+                            "enableFloatingIP": false,
+                            "idleTimeoutInMinutes": 5,
+                            "probe": {
+                                "id": "[concat(variables('lbID'),'/probes/lbProbe1')]"
+                            }
+                        }
+                    }
+                ],
+                "probes": [
+                    {
+                        "name": "lbProbe1",
+                        "properties": {
+                            "protocol": "Tcp",
+                            "port": "[parameters('BackendPort1')]",
+                            "intervalInSeconds": 5,
+                            "numberOfProbes": 2
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "apiVersion": "[variables('apiVersionLoadBalanceInboundNATRules')]",
+            "type": "Microsoft.Network/loadBalancers/inboundNatRules",
+            "name": "[concat(parameters('loadBalancerName'), '/', parameters('loadBalancerInboundNatRuleNamePrefix'), 'cakeshop', copyIndex())]",
+            "location": "[parameters('location')]",
+            "copy": {
+                "name": "lbNatLoop1",
+                "count": "[parameters('numInboundNATRules')]"
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Network/loadBalancers/', parameters('loadBalancerName'))]"
+            ],
+            "properties": {
+                "frontendIPConfiguration": {
+                    "id": "[variables('lbFrontEndIPConfigID')]"
+                },
+                "protocol": "tcp",
+                "frontendPort": "[copyIndex(parameters('inboundNATRuleCakeshopStartingPort'))]",
+                "backendPort": "[parameters('inboundNATRuleCakeshopBackendPort')]",
+                "enableFloatingIP": false
+            }
+        },
+        {
+            "apiVersion": "[variables('apiVersionLoadBalanceInboundNATRules')]",
+            "type": "Microsoft.Network/loadBalancers/inboundNatRules",
+            "name": "[concat(parameters('loadBalancerName'), '/', parameters('loadBalancerInboundNatRuleNamePrefix'), 'ssh', copyIndex())]",
+            "location": "[parameters('location')]",
+            "copy": {
+                "name": "lbNatLoop2",
+                "count": "[parameters('numInboundNATRules')]"
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Network/loadBalancers/', parameters('loadBalancerName'))]",
+                "lbNatLoop1"
+            ],
+            "properties": {
+                "frontendIPConfiguration": {
+                    "id": "[variables('lbFrontEndIPConfigID')]"
+                },
+                "protocol": "tcp",
+                "frontendPort": "[copyIndex(parameters('inboundNATRuleSSHStartingPort'))]",
+                "backendPort": "[parameters('inboundNATRuleSSHBackendPort')]",
+                "enableFloatingIP": false
+            }
+        },
+        {
+            "apiVersion": "[variables('apiVersionLoadBalanceInboundNATRules')]",
+            "type": "Microsoft.Network/loadBalancers/inboundNatRules",
+            "name": "[concat(parameters('loadBalancerName'), '/', parameters('loadBalancerInboundNatRuleNamePrefix'), 'BM0_RPC_Port')]",
+            "location": "[parameters('location')]",
+             "dependsOn": [
+
+                "[concat('Microsoft.Network/loadBalancers/', parameters('loadBalancerName'))]"
+
+            ],
+            "properties": {
+                "frontendIPConfiguration": {
+                    "id": "[variables('lbFrontEndIPConfigID')]"
+                },
+                "frontendPort": 8545,
+                "backendPort": 8545,
+                "enableFloatingIP": false,
+                "idleTimeoutInMinutes": 4,
+                "protocol": "Tcp",
+                "enableTcpReset": false
+            }
+        }
+    ]
+}
