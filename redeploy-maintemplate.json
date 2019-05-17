@@ -25,6 +25,8 @@
           "defaultValue":"eastus2",
           "allowedValues":[  
              "eastus2",
+              "eastus",
+              "westus",
              "centralus",
              "westus2",
              "westcentralus",
@@ -269,6 +271,8 @@
        "webSiteName":"webapi",
        "webSiteNameDR":"recoveryapi",
        "eastus2":"centralus",
+        "eastus": "westus",
+        "westus" :"eastus",
        "centralus":"eastus2",
        "westus2":"westcentralus",
        "westcentralus":"westus2",
