@@ -1,12 +1,9 @@
-# Microsoft
-
 # ColdChain Solution
 
 ![alt text](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/images/de0.png)
 
 ### Table of Contents 
 
-- [Microsoft](#microsoft)
 - [ColdChain Solution](#coldchain-solution)
     - [Table of Contents](#table-of-contents)
   - [1. Deployment Guide](#1-deployment-guide)
