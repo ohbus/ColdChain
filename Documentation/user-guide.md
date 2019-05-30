@@ -2,9 +2,9 @@
 
 ![alt text](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/images/u0.png)
 
-### Contents
+### Table of Contents 
  
- - [1. Introduction to User Guide](#1-introduction-to-user-guide)
+ - [1. Introduction](#1-introduction)
  - [2. Accessing the Web Application](#2-accessing-the-web-application)
    - [2.1 User Management ](#21-user-management)
      - [2.1.1 Adding of User and assigning role](#211-adding-of-user-and-assigning-role)
