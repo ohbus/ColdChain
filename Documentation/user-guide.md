@@ -32,7 +32,7 @@
     
     
     
-## 1. Introduction to User Guide
+## 1. Introduction
 
 Cold Chain management solution for Pharma addresses the challenges and concerns of the pharmaceutical companies, by providing near real-time tracking of the temperature sensitive consignments in a transparent and immutable manner throughout the supply chain, by combining IoT and Blockchain. The solution provides actionable insights for all the stakeholders through real time data capture, comprehensive analytics and immutable access with increased granularity (product, box, carton, or pallet level), thus helping in achieving business transformation and reaping the associated benefits. 
 This quick start guide describes how to interact with the Cold Chain Portal. This portal has a provision to create, monitor and track the shipments at a pallet, carton, box and a unit level. The portal allows to monitor the near real-time humidity, temperature, shock & vibration and tamper status of the various artifacts in the shipment. The immutability of transactions from portal is achieved by Blockchain.
