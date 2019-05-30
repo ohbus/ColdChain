@@ -4,7 +4,7 @@
 
 ### Table of Contents 
 
-  - [1. Deployment Guide](#1-deployment-guide)
+  - [1. Introduction](#1-introduction)
   - [2. Prerequisites for Deploying ARM Template](#2-prerequisites-for-deploying-arm-template)
     - [2.1. Integrating Applications with Azure Active Directory](#21-integrating-applications-with-azure-active-directory)
       - [2.1.1. To Register a new Application using the Azure Portal](#211-to-register-a-new-application-using-the-azure-portal)
@@ -41,7 +41,7 @@
     
     
     
-## 1. Deployment Guide
+## 1. Introduction
 
 This document explains about how to deploy Cold Chain solution using ARM template. You can deploy the ARM template in the following two ways:
 - **Using Azure portal** 
