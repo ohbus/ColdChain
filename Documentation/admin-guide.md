@@ -2,7 +2,7 @@
 
 ![alt text](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/images/a0.png)
 
-**Contents**
+**Table of Contents**
 
 <!--ts--> 
  - [1. Introduction](#1-introduction)
