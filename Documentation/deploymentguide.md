@@ -1,10 +1,10 @@
-# ColdChain Solution
+# Cold Chain Solution
 
 ![alt text](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/images/de0.png)
 
 ### Table of Contents 
 
-- [ColdChain Solution](#coldchain-solution)
+- [Cold Chain Solution](#Cold Chain-solution)
     - [Table of Contents](#table-of-contents)
   - [1. Deployment Guide](#1-deployment-guide)
   - [2. Prerequisites for Deploying ARM Template](#2-prerequisites-for-deploying-arm-template)
