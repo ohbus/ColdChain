@@ -4,8 +4,6 @@
 
 ### Table of Contents 
 
-- [Cold Chain Solution](#Cold Chain-solution)
-    - [Table of Contents](#table-of-contents)
   - [1. Deployment Guide](#1-deployment-guide)
   - [2. Prerequisites for Deploying ARM Template](#2-prerequisites-for-deploying-arm-template)
     - [2.1. Integrating Applications with Azure Active Directory](#21-integrating-applications-with-azure-active-directory)
