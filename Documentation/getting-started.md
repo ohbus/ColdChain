@@ -1,4 +1,4 @@
-# ColdChain Solution
+# Cold Chain Solution
 
 ![alt text](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/images/0.png)
 
@@ -54,7 +54,7 @@ Cold Chain management solution for Pharma addresses the challenges and concerns 
 
 ### 1.1 The Internet of Things 
 
-The Internet of Things (IoT) has created a buzz in the marketplace in the recent years. The IOT brings with it a concept of connecting any device to the internet and other connected devices to the network. **ColdChain solution are the major concern for the companies today and safeguarding them becomes an utmost necessary**.
+The Internet of Things (IoT) has created a buzz in the marketplace in the recent years. The IOT brings with it a concept of connecting any device to the internet and other connected devices to the network. **Cold Chain solution are the major concern for the companies today and safeguarding them becomes an utmost necessary**.
 
 IOT becomes a pivotal component which helps to have safer cities, homes and businesses; IOT enables both the private and public organizations to monitor facilities on a real-time basis. The IoT brings with it the secure connections of devices such as cameras, IP cameras, sensors to the smartphones to mention a few here. The combination of the connected devices would enable IoT solutions to *“gather data, analyze the data and create an action”* which enables to perform a task in near real time. 
 
