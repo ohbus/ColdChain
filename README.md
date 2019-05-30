@@ -14,11 +14,11 @@ Documentation
 
 ### Getting Started Guide
 
-To understand the overview of the Cold-Chain solution please refer **[Getting Started Guide](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/getting-started.md)**. 
+To understand the overview of the Cold Chain solution please refer **[Getting Started Guide](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/getting-started.md)**. 
 
 ### Deployment Guide
 
-To Deploy the Cold-Chain solution please refer **[Deployment Guide](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/deploymentguide.md)**. 
+To Deploy the Cold Chain solution please refer **[Deployment Guide](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/deploymentguide.md)**. 
 
 ### Admin Guide
 
@@ -26,4 +26,4 @@ To Deploy the Cold-Chain solution please refer **[Deployment Guide](https://gith
 
 ### User Guide
 
-To find how to use the Cold-chain solution once deployed successfully in Azure portal refer **[User Guide](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/user-guide.md)** 
+To find how to use the Cold Chain solution once deployed successfully in Azure portal refer **[User Guide](https://github.com/SecureColdChain/Wipro-Ltd-ColdChain/blob/master/Documentation/user-guide.md)** 
